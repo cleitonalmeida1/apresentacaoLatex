@@ -1,0 +1,70 @@
+%====================================================================================================
+% FaultRecovery: Ampliação da Biblioteca de Tolerância a Falhas
+%====================================================================================================
+% Apresentação do Trabalho de Conclusão de Curso
+%----------------------------------------------------------------------------------------------------
+% Autor				: Cleiton Gonçalves de Almeida
+% Orientador		: Kleber Kruger
+% Instituição 		: UFMS - Universidade Federal do Mato Grosso do Sul
+% Campus     		: Coxim
+%----------------------------------------------------------------------------------------------------
+% Arquivo			: introducao.tex
+% Data de criação	: 10 de setembro de 2016
+%====================================================================================================
+
+\section{Conclusão} \label{Sec:Conclusao}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{itemize}
+		\item Sem a FaultRecovery:
+		\begin{itemize}			
+			\item O \textit{firmware} falhou e não continuou a sequência da máquina de estados.
+		\end{itemize}
+		\item Com a FaultRecovery:
+		\begin{itemize}
+			\item O \textit{firmware} falhou e continuou a sequência da máquina de estados de acordo com o ponto de recuperação configurado.	
+			\item Aumento no tempo de execução do \textit{firmware}. No entanto a maioria das aplicações embarcadas não tem como fator principal o tempo de execução, exceto algumas aplicações de tempo real.
+			
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusão}
+	\begin{itemize}
+		\item Sem redundância de dados:
+		\begin{itemize}			
+			\item Nenhuma falha foi tolerada.
+			\item Num total de 100 testes, 44\% falharam.
+		\end{itemize}
+		\item Com redundância de dados:
+		\begin{itemize}
+			\item 100\% das falhas foram toleradas. No entanto adiciona um custo de desempenho no tempo de processamento. 
+			\item Num total de 100 testes, nenhum teste falhou.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contribuições deste trabalho}
+	\begin{itemize}
+		\item Parte da biblioteca FaultRecovery está sendo utilizada pelo Projeto de extensão Coxim robótica sediado na UFMS - campus Coxim para implementar uma máquina de estados para um carrinho seguidor de linha.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trabalhos Futuros}
+	\begin{itemize}
+		\item Testar o mapeamento de memória incluindo na biblioteca FaultInjector para outros modelos além do modelo \textit{mbed} LPC1768.
+		\item Salvar as cópias utilizadas pela classe TData, para se ter redundância de dados, em outras regiões de memória.
+		\item Aperfeiçoar a biblioteca FaultRecovery e a classe TData para diminuir o tempo de processamento em uma aplicação embarcada.
+		\item Explorar a injeção de falhas na memória flash, implementando um \textit{firmware} e injetando falhas enquanto ele está em execução.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trabalhos Futuros}
+		\centering \resizebox{!}{2cm}{Obrigado!}
+\end{frame}
+

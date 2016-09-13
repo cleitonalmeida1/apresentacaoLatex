@@ -1,0 +1,199 @@
+%====================================================================================================
+% FaultRecovery: A Ampliação da Biblioteca de Tolerância a Falhas
+%====================================================================================================
+% Apresentação do Trabalho de Conclusão de Curso
+%----------------------------------------------------------------------------------------------------
+% Autor				: Cleiton Gonçalves de Almeida
+% Orientador		: Kleber Kruger
+% Instituição 		: UFMS - Universidade Federal do Mato Grosso do Sul
+% Campus    		: Coxim
+%----------------------------------------------------------------------------------------------------
+% Arquivo			: apresentacao.tex
+% Data de criação	: 10 de Setembro de 2016
+%----------------------------------------------------------------------------------------------------
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%----------------------------------------------------------------------------------------------------
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+% License: CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%====================================================================================================
+
+\documentclass[a4paper,12pt,brazil]{beamer}
+
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[portuguese,brazil]{babel}
+
+\RequirePackage{amsmath,amssymb,amsfonts,float,fancyhdr}
+
+%====================================================================================================
+% Macro para dvi e pdf
+%----------------------------------------------------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{array}
+
+\usepackage[font=small]{caption}
+%\usepackage{caption}
+\usepackage{subcaption}
+
+%\hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+%\hypersetup[colorlinks=true,citecolor=blue,urlcolor=blue]{hyperref}
+
+% caminho dos arquivos gráficos
+\graphicspath{{figuras/}}
+% extensões que não serão necessárias especificar em toda instancia de \includegraphics
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+%==================== Fim da macro para dvi e pdf ===================================================
+
+%====================================================================================================
+% Configurando formatação dos códigos-fontes
+%----------------------------------------------------------------------------------------------------
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{courier}
+
+% Altera o nome padrão do rótulo usado no comando \autoref{}
+\renewcommand{\lstlistingname}{Quadro}
+
+% Altera o rótulo a ser usando no elemento pré-textual "Lista de código"
+\renewcommand{\lstlistlistingname}{Lista de Quadros}
+
+% Configura a "Lista de Códigos" conforme as regras da ABNT (para abnTeX2)
+\begingroup\makeatletter
+\let\newcounter\@gobble\let\setcounter\@gobbletwo
+\globaldefs\@ne \let\c@loldepth\@ne
+%  \newlistof{listings}{lol}{\lstlistlistingname}
+%  \newlistentry{lstlisting}{lol}{0}
+\endgroup
+
+% Cria uma nova customização para a linguagem C++
+\lstset{
+	alsoother={0123456789_},
+	backgroundcolor=\color{white},
+	basicstyle=\ttfamily,columns=fullflexible,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	escapeinside={\%*}{*)},
+	extendedchars=true,
+	frame=shadowbox,
+	inputencoding=utf8,
+	keepspaces=true,
+	numberbychapter=false,
+	numbers=left,
+%	numbersep=10pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=4,
+	framextopmargin=5pt,
+	framexbottommargin=5pt,
+	framexleftmargin=5pt,
+	framexrightmargin=5pt,
+	language=C++,
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {è}{{\`{e}}}1 {ê}{{\^{e}}}1 {ë}{{\¨{e}}}1 {É}{{\'{E}}}1 {Ê}{{\^{E}}}1 {û}{{\^{u}}}1 {ú}{{\'{u}}}1 {â}{{\^{a}}}1 {à}{{\`{a}}}1 {á}{{\'{a}}}1 {ã}{{\~{a}}}1 {Á}{{\'{A}}}1 {Â}{{\^{A}}}1 {Ã}{{\~{A}}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1 {õ}{{\~{o}}}1 {ó}{{\'{o}}}1 {ô}{{\^{o}}}1 {Õ}{{\~{O}}}1 {Ó}{{\'{O}}}1 {Ô}{{\^{O}}}1 {î}{{\^{i}}}1 {Î}{{\^{I}}}1 {í}{{\'{i}}}1 {Í}{{\~{Í}}}1
+}
+%==================== Fim da configuração dos códigos-fontes ========================================
+
+\mode<presentation>
+{
+	% The Beamer class comes with a number of default slide themes which change the colors and layouts of slides. Below this is a list % of all the themes, uncomment each in turn to see what they look like
+	
+	%\usetheme{default}
+	%\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	%\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla} % This is cool!
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden} % This is cool!
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	\usetheme{Madrid} % This is cool!
+	%\usetheme{Malmoe} % This is cool!
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh} % This is cool!
+	%\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+	
+	% As well as themes, the Beamer class has a number of color themes for any slide theme. Uncomment each of these in turn to see how it changes the colors of your current slide theme.
+	
+	%\usecolortheme{albatross}
+	%\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove} % (write, black)
+	%\usecolortheme{fly}
+	%\usecolortheme{lily} % (write, blue)
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+	
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+%----------------------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------------------
+
+% The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Trabalho de Conclusão de Curso]{FaultRecovery: A ampliação da biblioteca de tolerância a falhas} 
+
+\author{Cleiton Gonçalves de Almeida} % Your name
+\institute[CPCX-UFMS] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+	Orientador: Prof. Me. Kleber Kruger \\ 
+	Campus Coxim \\ 
+	Universidade Federal de Mato Grosso do Sul \\ % Your institution for the title page 
+	\medskip 
+	\textit{cleitonufms@hotmail.com} % Your email address
+}
+\date{13 de Setembro de 2016} % Date, can be changed to a custom date
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage % Print the title page as the first slide
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Estrutura da Apresentação} % Table of contents slide, comment this block out to remove it
+		\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+	\end{frame}
+	
+	%------------------------------------------------------------------------------------------------
+	%	PRESENTATION SLIDES
+	%------------------------------------------------------------------------------------------------
+	\include{introducao} % Introdução
+	\include{revisao} % Revisão da Literatura
+	\include{metodologia} % Metodologia
+	\include{resultados} % Resultados
+	\include{conclusao} % Conclusão
+	
+	%------------------------------------------------------------------------------------------------
+	%	REFERENCES SLIDES
+	%------------------------------------------------------------------------------------------------	
+	\include{referencias} % Referências Bibliográficas
+	
+\end{document}

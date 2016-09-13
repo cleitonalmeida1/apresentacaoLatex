@@ -1,0 +1,195 @@
+%====================================================================================================
+% FaultRecovery: Ampliação da Biblioteca de Tolerância a Falhas
+%====================================================================================================
+% Apresentação do Trabalho de Conclusão de Curso
+%----------------------------------------------------------------------------------------------------
+% Autor				: Cleiton Gonçalves de Almeida
+% Orientador		: Kleber Kruger
+% Instituição 		: UFMS - Universidade Federal do Mato Grosso do Sul
+% Campus     		: Coxim
+%----------------------------------------------------------------------------------------------------
+% Arquivo			: introducao.tex
+% Data de criação	: 10 de setembro de 2016
+%====================================================================================================
+
+%\section{Revisão da Literatura} \label{Sec:Revisao}
+
+%\subsection{Falhas, Erros e Defeitos}
+
+%\begin{frame}
+%	\frametitle{Falhas, erros e defeitos}
+%	\begin{itemize}
+%		\item As falhas estão associadas ao universo físico; os erros ao universo da informação; e os defeitos ao universo do usuário.
+%		\item Uma falha não necessariamente leva a um estado de erro; e um erro não necessariamente provoca um defeito.
+%	\end{itemize}
+%\end{frame}
+%
+%\begin{frame}
+%	\frametitle{Falhas, erros e defeitos}
+%	\begin{figure}
+%		\begin{center}\includegraphics[scale=0.5]{figuras/falhas_erros_defeitos}\end{center}
+%		\caption[Universo dos erros]{Universo dos erros. Retirado de \cite{Weber:2003}.}
+%		\label{Fig:FalhasErrosDefeitos}
+%	\end{figure}
+%\end{frame}
+
+%\subsection{Classificação das Falhas}
+
+%\begin{frame}
+%	\frametitle{Classificação das falhas}
+%	As falhas podem ser classificadas em:
+%	\begin{itemize}
+%		\item Duração
+%		\begin{itemize}
+%			\item Falhas transientes
+%			\item Falhas intermitentes
+%			\item Falhas permanentes
+%		\end{itemize}
+%		\item Extensão
+%		\begin{itemize}
+%			\item Falhas locais
+%			\item Falhas globais
+%		\end{itemize}
+%		\item Natureza: hardware, software, projeto, entre outros.
+%	\end{itemize}
+%\end{frame}
+
+\subsection{Tolerância a Falhas}
+
+\begin{frame}
+	\frametitle{Tolerância a falhas}
+	\begin{itemize}
+		\item Tolerância a falhas é a propriedade que permite a um sistema continuar funcionando adequadamente, mesmo que num nível reduzido, após a manifestação de falhas em alguns de seus componentes.
+	\end{itemize}
+\end{frame}
+
+\subsection{Injeção de Falhas}
+
+\begin{frame}
+	\frametitle{Injeção de Falhas}
+	\begin{itemize}
+		\item A injeção de falhas é um processo importante para validar e verificar a confiabilidade de um sistema, seja por alteração de código, simulando uma falha de software ou a nível de pinos (Pin-level Injection) injetando falhas diretamente no hardware.
+		\item Por que usar injetores de falhas ao invés de testar em um ambiente real?
+	\end{itemize}
+\end{frame}
+
+\subsection{Padrão GoF (Padrões Fundamentais Originais)}
+
+\begin{frame}
+	\frametitle{Padrão de Projeto State}
+	\begin{itemize}
+		\item Padrões de comportamento são aqueles que descrevem como os objetos interagem, distribuindo responsabilidades.	
+		\item O padrão State faz parte dos padrões de comportamento e permite que parte do comportamento de um objeto seja alterado conforme o estado do objeto.		
+	\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas de Tolerância a Falhas: Exemplo de redundância}
+%	\begin{figure}
+%		\begin{center}\includegraphics[width=1.0\textwidth]{./figuras/nmr.png} \end{center}
+%		\caption{Redundância de $n$ módulos. Retirado de \cite{Weber:2003}.}
+%	\end{figure}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas baseadas no temporizador \textit{watchdog}}
+%	\begin{itemize}
+%		\item O \textit{watchdog} é um dispositivo eletrônico temporizador usado para detectar erros e reiniciar o equipamento quando o sistema trava;
+%		\item O mais comum são \textit{watchdogs} com dois registradores, um temporizador e outro, que armazena o valor de limiar. O temporizador deve ser zerado periodicamente pelo programa antes que atinja o valor do limiar.
+%	\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas de Tolerância a Falhas: Redundância de Software}
+%	\begin{figure}
+%		\begin{center}\includegraphics[width=1.0\textwidth]{./figuras/n_versoes.png} \end{center}
+%		\caption{Programação $n$ versões. Retirado de \cite{Weber:2002}.}
+%	\end{figure}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas de Tolerância a Falhas: Redundância de Software}
+%	\begin{figure}
+%		\begin{center}\includegraphics[width=0.85\textwidth]{./figuras/blocos_recuperacao.png} \end{center}
+%		\caption{Blocos de recuperação. Retirado de \cite{Weber:2002}.}
+%	\end{figure}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas de Tolerância a Falhas: Redundância de Dados}
+%	\begin{itemize}
+%		\item Consiste em ter dados redundantes na execução do programa.
+%		\item Bits ou sinais extras são armazenados ou transmitidos junto a informação.
+%		\item Tem sido utilizada exaustivamente em memórias e processadores através de códigos de correção de erros (CRC).
+%	\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Técnicas de Tolerância a Falhas: Redundância de Processamento}
+%	\begin{itemize}
+%		\item Repete a execução do código no tempo; 
+%		\item Evita custos adicionais relativos ao hardware, mas aumenta o tempo necessário para realizar um processamento;
+%		\item É usada em sistemas onde o tempo não é crítico ou onde o processador trabalha com ociosidade.
+%	\end{itemize}
+%\end{frame}
+
+%\subsection{Injeção de Falhas}
+
+%\begin{frame}
+%	\frametitle{Injeção de falhas}
+%	\begin{itemize}
+%		\item A injeção de falhas é uma técnica de validação da segurança dos sistemas tolerantes a falhas que consiste na realização de experimentos controlados, nos quais observa-se o comportamento dos sistemas na presença de falhas geradas propositalmente (injetadas).
+%		\item As injeções de falhas podem ser feitas via:
+%		\begin{itemize}
+%			\item Hardware
+%			\item Software
+%			\item Simulação
+%		\end{itemize}
+%		\item É necessário garantir a representatividade das falhas injetadas.
+%		\begin{itemize}
+%			\item O que injetar?
+%			\item Onde injetar?
+%		\end{itemize}
+%	\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Injeção de falhas por \textit{hardware}}
+%	\begin{itemize}
+%		\item As injeções podem ser classificadas em duas categorias:
+%		\begin{itemize}
+%			\item Sem contato (interferência eletromagnética, bombardeio com radiação ionizante, quedas de tensão na fonte de energia);
+%			\item Com contato (\textit{pin-level}, que atua abrindo, curto-circuitando ou injetando sinais interferentes diretamente (por contato) em cada pino do dispositivo sob teste);
+%		\end{itemize}
+%		\item Requerem uso de \textit{hardware} especial;
+%		\item Injetam falhas reais no \textit{hardware}, mas podem danificar o componente sob teste.
+%	\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Injeção de falhas por \textit{software}}
+%	\begin{itemize}
+%		\item SWIFI (\textit{Software Implemented Fault Injection}) - emula falhas de hardware através do software;
+%		\item Menos dispendioso em termos de tempo e complexidade;
+%		\item O sistema em estudo não corre o risco de ser danificado durante a injeção de falhas;
+%		\item SFI (\textit{Software Fault Injection}). Um programa injetor emula as falhas no \textit{software} (\textit{bugs}) através da introdução de pequenas alterações no código original do programa;
+%		\begin{itemize}
+%			\item G-SWFIT (\textit{Generic Software Fault Injection Technique}).
+%		\end{itemize}
+%	\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%	\frametitle{Trabalhos relacionados}
+%	\begin{itemize}
+%		\item A grande maioria são destinados a outras plataformas e a sistemas críticos ou de médio e grande porte;
+%		\item Os trabalhos analisados não apresentavam as localizações das falhas injetadas;
+%		\item O trabalho mais próximo foi o de Secall \cite{Secall:2007}.
+%		\begin{itemize}
+%			\item Fez uma avaliação comparativa do impacto do emprego das técnicas de programação defensiva na segurança de sistemas críticos.
+%			\item Injetou falhas por interferências eletromagnéticas, utilizando-se radiofrequência irradiada.
+%			\item Utilizou-se como estudo de caso um ambiente metroferroviário.
+%			\item Ao final, foi feito uma avaliação quantitativa da eficácia de algumas técnicas de programação defensiva na capacidade de tolerância a falhas em aplicações críticas. 
+%		\end{itemize}
+%	\end{itemize}
+%\end{frame}
